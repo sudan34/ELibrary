@@ -1,0 +1,14 @@
+﻿.footerLinks {
+    color:#ff0000;
+    text-decoration: none !important;
+}
+
+ .footerLinks:hover {
+     color : #ffd800;
+ }
+ #footer1{
+     background:#76b4ff;
+ }
+#footer2 {
+    background: #35c3c5;
+}
