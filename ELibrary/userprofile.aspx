@@ -1,12 +1,12 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site1.Master" AutoEventWireup="true" CodeBehind="usersignup.aspx.cs" Inherits="ELibrary.usersignup" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site1.Master" AutoEventWireup="true" CodeBehind="userprofile.aspx.cs" Inherits="ELibrary.userprofile" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
 
-    <div class="container">
+    <div class="container-fluid">
         <div class="row">
-            <div class="col-md-8 mx-auto">
+            <div class="col-md-5">
                 <div class="card">
                     <div class="card-body">
                         <div class="row">
@@ -19,7 +19,9 @@
                         <div class="row">
                             <div class="col">
                                 <center>
-                                    <h4>Member Signup</h4>
+                                    <h4>Your Profile</h4>
+                                    <span>Account Status</span>
+                                    <asp:Label class="badge rounded-pill bg-success" ID="Label1" runat="server" Text="Your Status"></asp:Label>
                                 </center>
                             </div>
                         </div>
@@ -93,35 +95,43 @@
                                     <asp:TextBox CssClass="form-control" ID="TextBox5" runat="server" placeholder="Full Address" TextMode="MultiLine" Rows="2"></asp:TextBox>
                                 </div>
                             </div>
-                        </div><br>
+                        </div>
                         <div class="row">
                             <div class="col">
                                 <center>
-                                    <span class="badge bg-info">Login Credential</span>
+                                    <span class="badge badge-info">Login Credential</span>
                                 </center>
                             </div>
                         </div>
                         <div class="row">
-                            <div class="col-md-6">
+                            <div class="col-md-4">
                                 <label>User ID</label>
                                 <div class="form-group">
-                                    <asp:TextBox CssClass="form-control" ID="TextBox8" runat="server" placeholder="User ID"></asp:TextBox>
+                                    <asp:TextBox CssClass="form-control" ID="TextBox8" runat="server" placeholder="User ID" ReadOnly="true"></asp:TextBox>
                                 </div>
                             </div>
-                            <div class="col-md-6">
-                                <label>Password</label>
+                            <div class="col-md-4">
+                                <label>Old Password</label>
                                 <div class="form-group">
-                                    <asp:TextBox CssClass="form-control" ID="TextBox9" runat="server" placeholder="Password" TextMode="Password"></asp:TextBox>
+                                    <asp:TextBox CssClass="form-control" ID="TextBox9" runat="server" placeholder="Old Password" TextMode="Password" ReadOnly="true"></asp:TextBox>
+                                </div>
+                                <br>
+                            </div>
+                            <div class="col-md-4">
+                                <label>New Password</label>
+                                <div class="form-group">
+                                    <asp:TextBox CssClass="form-control" ID="TextBox10" runat="server" placeholder="New Password" TextMode="Password"></asp:TextBox>
                                 </div>
                                 <br>
                             </div>
                         </div>
                         <div class="row">
-                            <div class="col">
-                                <div class="form-group">
-                                    <asp:Button CssClass="btn btn-success btn-lg w-100" ID="Button1" runat="server" Text="Login" /><br>
-                                </div>
-                                <br>
+                            <div class="col-8 mx-auto">
+                                <center>
+                                    <div class="form-group">
+                                        <asp:Button CssClass="btn btn-primary btn-lg w-100" ID="Button1" runat="server" Text="Update" /><br>
+                                    </div>
+                                </center>
                             </div>
                         </div>
                     </div>
@@ -129,7 +139,38 @@
                 <a href="home.aspx"><< Back to Home</a><br>
                 <br>
             </div>
-        </div>
+            <div class="col-md-7">
+                <div class="card">
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col">
+                                <center>
+                                    <img width="100px" src="imgs/books.png" />
+                                </center>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col">
+                                <center>
+                                    <h4>Your Books</h4>
+                                    <asp:Label class="badge rounded-pill bg-info" ID="Label2" runat="server" Text="info about book due date"></asp:Label>
+
+                                </center>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col">
+                                <hr />
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col">
+                               <asp:GridView  class="table table-striped table-bordered" ID="GridView1" runat="server"></asp:GridView>
+                            </div>
+
+                        </div>
+                </div>
     </div>
+
 
 </asp:Content>
