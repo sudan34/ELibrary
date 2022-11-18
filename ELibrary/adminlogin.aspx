@@ -35,7 +35,7 @@
                                     <asp:TextBox CssClass="form-control" ID="TextBox2" runat="server" placeholder="Password" TextMode="Password"></asp:TextBox>
                                 </div> <br>
                                 <div class="form-group">
-                                    <asp:Button CssClass="btn btn-success w-100" ID="Button1" runat="server" Text="Login" /><br>
+                                    <asp:Button CssClass="btn btn-success w-100" ID="Button1" runat="server" Text="Login" OnClick="Button1_Click" /><br>
                                 </div><br>
                             </div>
                         </div>

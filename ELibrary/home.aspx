@@ -27,14 +27,14 @@
                 </div>
                 <div class="col-md-4">
                     <center>
-                        <img width="150px" src="imgs/defaulters-list.png" />
+                        <img width="150px" src="imgs/search-online.png" />
                         <h4>Search Books</h4>
                         <p class="text-justify">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry.</p>
                     </center>
                 </div>
                 <div class="col-md-4">
                     <center>
-                        <img width="150px" src="imgs/search-online.png" />
+                        <img width="150px" src="imgs/defaulters-list.png" />
                         <h4>Defaulters List</h4>
                         <p class="text-justify">Lorem has survived not only five centuries, typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheet.</p>
                     </center>

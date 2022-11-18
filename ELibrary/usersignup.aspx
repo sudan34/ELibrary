@@ -66,7 +66,7 @@
                                         <asp:ListItem Text="Select" Value="Select" />
                                         <asp:ListItem Text="Bagmati" Value="Bagmati" />
                                         <asp:ListItem Text="Karnali" Value="Karnali" />
-                                        <asp:ListItem Text="Lunbini" Value="Lunbini" />
+                                        <asp:ListItem Text="Lumbini" Value="Lumbini" />
                                         <asp:ListItem Text="Gandaki" Value="Gandaki" />
                                     </asp:DropDownList>
                                 </div>
@@ -119,7 +119,7 @@
                         <div class="row">
                             <div class="col">
                                 <div class="form-group">
-                                    <asp:Button CssClass="btn btn-success btn-lg w-100" ID="Button1" runat="server" Text="Login" /><br>
+                                    <asp:Button CssClass="btn btn-success btn-lg w-100" ID="Button1" runat="server" Text="Sign up" OnClick="Button1_Click" /><br>
                                 </div>
                                 <br>
                             </div>
