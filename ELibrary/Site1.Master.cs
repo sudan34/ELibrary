@@ -136,6 +136,8 @@ namespace ELibrary
             LinkButton8.Visible = false; //book inventory link button
             LinkButton9.Visible = false; //book issuing link button
             LinkButton10.Visible = false; //member management link button
+
+            Response.Redirect("home.aspx");
         }
         //view profile
         protected void LinkButton7_Click(object sender, EventArgs e)
