@@ -177,7 +177,7 @@ namespace ELibrary
             try
             {
                 SqlConnection con = new SqlConnection(strcon);
-                if (con.State == System.Data.ConnectionState.Open)
+                if (con.State == System.Data.ConnectionState.Closed)
                 {
                     con.Open();
                 }
