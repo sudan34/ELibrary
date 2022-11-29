@@ -1,6 +1,11 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site1.Master" AutoEventWireup="true" CodeBehind="userprofile.aspx.cs" Inherits="ELibrary.userprofile" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $(".table").prepend($("<thead></thead>").append($(this).find("tr:first"))).dataTable();
+        });
+    </script>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
 
@@ -113,7 +118,7 @@
                             <div class="col-md-4">
                                 <label>Old Password</label>
                                 <div class="form-group">
-                                    <asp:TextBox CssClass="form-control" ID="TextBox9" runat="server" placeholder="Old Password" TextMode="Password" ReadOnly="true"></asp:TextBox>
+                                    <asp:TextBox CssClass="form-control" ID="TextBox9" runat="server" placeholder="Old Password" ReadOnly="true"></asp:TextBox>
                                 </div>
                                 <br>
                             </div>
@@ -129,7 +134,7 @@
                             <div class="col-8 mx-auto">
                                 <center>
                                     <div class="form-group">
-                                        <asp:Button CssClass="btn btn-primary btn-lg w-100" ID="Button1" runat="server" Text="Update" /><br>
+                                        <asp:Button CssClass="btn btn-primary btn-lg w-100" ID="Button1" runat="server" Text="Update" OnClick="Button1_Click" /><br>
                                     </div>
                                 </center>
                             </div>
@@ -164,13 +169,24 @@
                             </div>
                         </div>
                         <div class="row">
+                            <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString='<%$ ConnectionStrings:elibraryDBConnectionString %>' SelectCommand="SELECT * FROM [book_issue_tbl]"></asp:SqlDataSource>
                             <div class="col">
-                               <asp:GridView  class="table table-striped table-bordered" ID="GridView1" runat="server"></asp:GridView>
+                                <asp:GridView class="table table-striped table-bordered" ID="GridView1" runat="server" AutoGenerateColumns="False">
+                                    <Columns>
+                                        <asp:BoundField DataField="member_id" HeaderText="Member ID" SortExpression="member_id"></asp:BoundField>
+                                        <asp:BoundField DataField="memeber_name" HeaderText="Member Name" SortExpression="memeber_name"></asp:BoundField>
+                                        <asp:BoundField DataField="book_id" HeaderText="Book ID" SortExpression="book_id"></asp:BoundField>
+                                        <asp:BoundField DataField="book_name" HeaderText="Book Name" SortExpression="book_name"></asp:BoundField>
+                                        <asp:BoundField DataField="issue_date" HeaderText="Issue Date" SortExpression="issue_date"></asp:BoundField>
+                                        <asp:BoundField DataField="due_date" HeaderText="Due Date" SortExpression="due_date"></asp:BoundField>
+                                    </Columns>
+                                </asp:GridView>
                             </div>
 
                         </div>
+                    </div>
                 </div>
+            </div>
+        </div>
     </div>
-
-
 </asp:Content>
