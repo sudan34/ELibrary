@@ -5,14 +5,15 @@
 <html>
 <head runat="server">
     <title></title>
-    <link href="bootstrap/css/bootstrap.rtl.min.css" rel="stylesheet" />
+    <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet" />
     <link href="datatables/css/jquery.dataTables.min.css" rel="stylesheet" />
     <link href="fontawesome/css/all.css" rel="stylesheet" />
 
     <link href="css/Customstylesheet.css" rel="stylesheet" />
+    <script src="bootstrap/js/jquery.slim.min.js"></script>
 
     <script src="bootstrap/js/bootstrap.bundle.min.js"></script>
-    <script src="bootstrap/js/bootstrap.min.js"></script>
+
     <script src="bootstrap/js/popper.min.js"></script>
 
     <script src="datatables/js/jquery.dataTables.min.js"></script>

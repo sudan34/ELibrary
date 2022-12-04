@@ -72,7 +72,9 @@
     <Content Include="adminpublishermanagement.aspx" />
     <Content Include="bookdetails.aspx" />
     <Content Include="bookissuing.aspx" />
-    <Content Include="bootstrap\css\bootstrap.rtl.min.css" />
+    <Content Include="bootstrap\css\bootstrap.min.css" />
+    <Content Include="bootstrap\js\bootstrap.bundle.min.js" />
+    <Content Include="bootstrap\js\jquery.slim.min.js" />
     <Content Include="css\Customstylesheet.css" />
     <Content Include="datatables\css\jquery.dataTables.min.css" />
     <Content Include="datatables\js\jquery.dataTables.min.js" />
@@ -2130,9 +2132,6 @@
     <Content Include="fontawesome\svgs\solid\yen-sign.svg" />
     <Content Include="fontawesome\svgs\solid\yin-yang.svg" />
     <Content Include="fontawesome\svgs\solid\z.svg" />
-    <Content Include="bootstrap\js\bootstrap.bundle.min.js" />
-    <Content Include="bootstrap\js\bootstrap.min.js" />
-    <Content Include="bootstrap\js\popper.min.js" />
     <Content Include="home.aspx" />
     <Content Include="imgs\adminuser.png" />
     <Content Include="imgs\books.png" />
